@@ -5,23 +5,196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book</title>
+    <link rel="stylesheet" href="/frontend/styles/style.css">
+    <script src="https://kit.fontawesome.com/103634ce9d.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">X-course task: store</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Cart</a></li>
-                <li><a href="#">Account</a></li>
-                <li><a href="#">Sign-Out</a></li>
-            </ul>
+
+        <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">X-course task</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-1 top-menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Feedback</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                <i class="fa-regular fa-user"></i>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a href="#" class="dropdown-item">Sign-In</a></li>
+                                <li><a href="#" class="dropdown-item">Sign-Out</a></li>
+                                <li><a href="#" class="dropdown-item">Account</a></li>
+                            </ul>
+                        <li>
+                            <a href="#" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="row gx-4 gx-lg-5 align-items-center">
+                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="/frontend/media/books/django1.jpg"
+                            alt="..." /></div>
+                    <div class="col-md-6">
+                        <div class="small mb-1">ISBN: 9781491945940</div>
+                        <h1 class="display-5 fw-bolder">Lightweight Django</h1>
+                        <div class="small mb-1 fw-bold fst-italic">Authors: Julia Solórzano, Mark Lavin </div>
+                        <div class="fs-5 mb-5">
+                            <span class="text-decoration-line-through">$149.00</span>
+                            <span>$99.00</span>
+                        </div>
+                        <div class="fs-5 mb-5">
+                            <span class="badge bg-black">Python</span>
+                            <span class="badge bg-black">Django</span>
+                            <span class="badge bg-black">Web development</span>
+                        </div>
+                        <p class="lead">
+                            How can you take advantage of the Django framework to integrate complex client-side
+                            interactions and real-time features into your web applications? Through a series of rapid
+                            application development projects, this hands-on book shows experienced Django developers how
+                            to include REST APIs, WebSockets, and client-side MVC frameworks such as Backbone.js into
+                            new or existing projects.
+                        </p>
+                        <div class="d-flex">
+                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1"
+                                style="max-width: 3rem" />
+                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                <i class="bi-cart-fill me-1"></i>
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5 bg-light">
+            <div class="container px-4 px-lg-5 mt-5">
+                <h2 class="fw-bolder mb-4">Related products</h2>
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="/frontend/media/books/related/docker.png"
+                                alt="docker book image" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Understanding Docker</h5>
+                                    $40.00 - $80.00
+                                </div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">About book</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                Sale</div>
+                            <img class="card-img-top" src="/frontend/media/books/related/js_book.png"
+                                alt="js book image" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Javascript & Jquery</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <span class="text-muted text-decoration-line-through">$50.00</span>
+                                    $25.00
+                                </div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">About book
+                                </a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                Sale</div>
+                            <img class="card-img-top" src="/frontend/media/books/related/mongo.png"
+                                alt="mongo book image" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Mastering MongoDB 7.0</h5>
+                                    <span class="text-muted text-decoration-line-through">$50.00</span>
+                                    $25.00
+                                </div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">About book</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="/frontend/media/books/related/posttgres.jpg"
+                                alt="postgres book image" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder">Essential Postgres</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    $40.00
+                                </div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">About Book</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--
         <article>
-            <img src="/frontend/media/books/django1.jpg" alt="book preview">
+            <img src="/media/books/django1.jpg" alt="book preview">
             <h1>Book name: ~~~</h1>
             <ul>
                 <li>Book author: ~~~</li>
@@ -41,10 +214,15 @@
                 </li>
             </ul>
         </article>
+    -->
     </main>
-    <footer>
-        <p>Created by: Dmytro Kolesnyk via Prometheus</p>
+    <footer class="bg-body-tertiary text-center text-lg-start">
+        <div class="text-center p-3 container-fluid" style="background-color: rgba(0, 0, 0, 0.05);">
+            <p>2024 - Created by Dmytro Kolesnyk via Prometheus.</p>
+            <a href="https://github.com/ch4zzy/"><i class="fa-brands fa-github fa-lg"></i></a>
+        </div>
     </footer>
+</body>
 </body>
 
 </html>
