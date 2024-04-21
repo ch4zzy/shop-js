@@ -78,7 +78,7 @@
                         <div class="small mb-1 fw-bold fst-italic">Authors: Julia Solórzano, Mark Lavin </div>
                         <div class="fs-5 mb-5">
                             <span class="text-decoration-line-through">$149.00</span>
-                            <span>$99.00</span>
+                            <span id="productPrice">$99.00</span>
                         </div>
                         <div class="fs-5 mb-5">
                             <span class="badge bg-black">Python</span>
@@ -95,6 +95,7 @@
                         <div class="d-flex">
                             <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1"
                                 style="max-width: 3rem" />
+                            <span type="text" id="totalPrice" class="form-control text-center me-3" readonly></span>
                             <button class="btn btn-outline-dark flex-shrink-0" type="button">
                                 <i class="bi-cart-fill me-1"></i>
                                 Add to cart
@@ -195,29 +196,6 @@
                 </div>
             </div>
         </section>
-        <!--
-        <article>
-            <img src="/media/books/django1.jpg" alt="book preview">
-            <h1>Book name: ~~~</h1>
-            <ul>
-                <li>Book author: ~~~</li>
-                <li>Book level: ~~~</li>
-                <li>Book tags: ~~~</li>
-                <li>Book price: ~~~</li>
-            </ul>
-            <ul>
-                <li>
-                    <form action="#" method="post">
-                        <label for="quantity">Quantity</label>
-                        <input type="number" name="quantity">
-                        <button type="submit">Add to cart</button>
-                        <label for="total_price">Total price:</label>
-                        <input type="number" name="total_price" value="35.14" readonly>
-                    </form>
-                </li>
-            </ul>
-        </article>
-    -->
     </main>
     <footer class="bg-body-tertiary text-center text-lg-start">
         <div class="text-center p-3 container-fluid" style="background-color: rgba(0, 0, 0, 0.05);">
@@ -225,6 +203,7 @@
             <a href="https://github.com/ch4zzy/"><i class="fa-brands fa-github fa-lg"></i></a>
         </div>
     </footer>
+    <script src="/frontend/scripts/total_price.js"></script>
 </body>
 </body>
 
