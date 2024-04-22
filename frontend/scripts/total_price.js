@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let bookQuantity = document.getElementById("inputQuantity");
     let totalPriceElement = document.getElementById("totalPrice");
 
-    function updatePrice() {
+    function updatePrice(bookPrice, bookQuantity) {
         let quantity = bookQuantity.value;
         if (quantity < 0) {
             bookQuantity.value = 0;
@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
         let totalPrice = bookPrice * bookQuantity.value;
         totalPriceElement.innerText = "$" + totalPrice.toFixed(2);
     }
-    updatePrice();
-    bookQuantity.addEventListener("input", updatePrice);
+    updatePrice(bookPrice, bookQuantity);
+    bookQuantity.addEventListener("input", function()
+    {
+        updatePrice(bookPrice, bookQuantity);
+    });
 });
