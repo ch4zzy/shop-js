@@ -75,5 +75,14 @@ footer {
     }
 }
 
+@media (min-width: 992px) {
+    .custom-footer {
+        position: absolute;
+        margin-top: auto;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
 
 /* Footer */
