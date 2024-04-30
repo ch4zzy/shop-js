@@ -61,8 +61,18 @@ a:hover {
 
 footer {
     position: relative;
+    margin-top: auto;
     bottom: 0;
     width: 100%;
+}
+
+@media (max-width: 991px) {
+    .custom-footer {
+        position: relative;
+        margin-top: auto;
+        bottom: 0;
+        width: 100%;
+    }
 }
 
 
